@@ -1,0 +1,31 @@
+{
+  "name": "autoblog-twitter-automation",
+  "version": "1.0.0",
+  "description": "Free AI Blog Generator with Twitter Automation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "puppeteer": "^21.5.0",
+    "puppeteer-core": "^21.5.0",
+    "@sparticuz/chromium-min": "^121.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+
+// vercel.json
+{
+  "functions": {
+    "api/post-tweet.js": {
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "GEMINI_API_KEY": "@gemini_api_key"
+  }
+}
